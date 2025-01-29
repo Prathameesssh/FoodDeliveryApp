@@ -24,7 +24,7 @@ const CardFeatures = ({ id, name, image, category, price, description }) => {
     //send data to the backend
     if (email) {
       const fetchData = await fetch(
-        `${process.env.REACT_APP_SERVER_DOMAIN}/AddToCart`,
+        `${process.env.REACT_APP_SERVER_DOMAIN}/api/cart/add`,
         {
           method: "POST",
           headers: {

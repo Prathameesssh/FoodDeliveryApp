@@ -6,7 +6,7 @@ export const fetchCartItems = createAsyncThunk(
   "cart/fetchCartItems",
   async (email) => {
     const response = await fetch(
-      `${process.env.REACT_APP_SERVER_DOMAIN}/cart?email=${email}`
+      `${process.env.REACT_APP_SERVER_DOMAIN}/api/cart?email=${email}`
     );
     const data = await response.json();
     return data;
@@ -17,7 +17,7 @@ export const removeFromCart = createAsyncThunk(
   "cart/removeFromCart",
   async (itemId) => {
     const response = await fetch(
-      `${process.env.REACT_APP_SERVER_DOMAIN}/cart/${itemId}`,
+      `${process.env.REACT_APP_SERVER_DOMAIN}/api/cart/${itemId}`,
       {
         method: "DELETE",
       }

@@ -49,7 +49,7 @@ const NewProduct = () => {
         if (name && category && image && price && description) {
           //toast("Data uploaded Successfully");
           const fetchData = await fetch(
-            `${process.env.REACT_APP_SERVER_DOMAIN}/newproduct`,
+            `${process.env.REACT_APP_SERVER_DOMAIN}/api/products/add`,
             {
               method: "POST",
               headers: {

@@ -58,7 +58,7 @@ const SignUp = () => {
     if (firstName && email && password && confirmpassword) {
       if (password === confirmpassword) {
         const fetchData = await fetch(
-          `${process.env.REACT_APP_SERVER_DOMAIN}/signup`,
+          `${process.env.REACT_APP_SERVER_DOMAIN}/api/users/signup`,
           {
             method: "POST",
             headers: {

@@ -48,7 +48,7 @@ const Login = () => {
     const { email, password } = data;
     if (email && password) {
       const fetchData = await fetch(
-        `${process.env.REACT_APP_SERVER_DOMAIN}/login`,
+        `${process.env.REACT_APP_SERVER_DOMAIN}/api/users/login`,
         {
           method: "POST",
           headers: {
